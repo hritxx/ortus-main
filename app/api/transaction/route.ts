@@ -29,7 +29,6 @@ export async function POST(request: Request) {
         return NextResponse.json({ error: "User not found" }, { status: 404 });
       }
 
-      // Update user balance and create transaction in a transaction
       await prisma.$transaction([
         prisma.user.update({
           where: { email: session.user.email },
