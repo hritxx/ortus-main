@@ -42,7 +42,7 @@ const authOptions = {
     }),
   ],
   session: {
-    strategy: "jwt",
+    strategy: "jwt" as "jwt",
   },
   pages: {
     signIn: "/",
